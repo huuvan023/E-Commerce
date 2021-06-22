@@ -1,0 +1,13 @@
+.image-zoom img{display:block;transition: all .8s ease;}
+.image-zoom img:hover{transform: scale(1.5);}
+.image-zoom p{display:block;overflow: hidden;}
+#active1:hover{
+    background:none;
+    color:hsl(32, 93%, 56%);}
+#active2:hover{
+        background:none;
+        color:hsl(32, 93%, 56%);}
+ 
+.video {
+      padding-bottom: 40px;
+        margin: 40px 0px 0px 0px }
