@@ -14,7 +14,7 @@
 Route::get('/','HomeController@index' );
 Route::get('/trang-chu','HomeController@index');
 Route::post('/tim-kiem','HomeController@search');
-
+//Admin
 //Admin
 Route::get('/all-admin','AdminController@all_admin');
 Route::get('/add-admin','AdminController@add_admin');
