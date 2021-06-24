@@ -1,7 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="39d99be8-c7aa-4819-bb38-85ccc9806d39" name="Default Changelist" comment="" />
+    <list default="true" id="39d99be8-c7aa-4819-bb38-85ccc9806d39" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/admin/988722dd5b531362ee425c9f6ef8c02166.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/admin/hinh-nen-meo-de-thuong-3143.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/admin/hinh-nen-meo-de-thuong-3174.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/admin/hinh-nen-meo-de-thuong-3188.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/5bab48eecbd6b5aa9c6311ed5b4a66da23.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/5bab48eecbd6b5aa9c6311ed5b4a66da80.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/6708262d-465f-4a92-b02a-af86b969ad3b98.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/988722dd5b531362ee425c9f6ef8c02114.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/988722dd5b531362ee425c9f6ef8c02124.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/988722dd5b531362ee425c9f6ef8c02125.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/988722dd5b531362ee425c9f6ef8c02169.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/988722dd5b531362ee425c9f6ef8c02177.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/988722dd5b531362ee425c9f6ef8c02181.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/988722dd5b531362ee425c9f6ef8c02185.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/Login15.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/Login69.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/Tay-cầm-PS4-Slim-Chính-Hãng-Màu-Trắng-Dualshock-4-white-GameStation36.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/Tay-cầm-PS4-Slim-Chính-Hãng-Màu-Trắng-Dualshock-4-white-GameStation89.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/Tay-cầm-PS4-Slim-Chính-Hãng-Màu-Đỏ-Dualshock-4-red-GameStation40.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/Tay-cầm-PS4-Slim-Chính-Hãng-Màu-Đỏ-Dualshock-4-red-GameStation8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/User28.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/User5.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/User53.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_0537009281.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092811.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092813.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092814.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092815.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092816.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092817.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092821.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092824.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092827.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092828.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_0537009283.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092832.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092833.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092835.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092837.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092838.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092839.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092842.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092844.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092845.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092846.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_0537009285.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092850.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092851.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092852.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092853.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092854.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092855.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092857.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092858.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_0537009286.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092861.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092866.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092867.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092868.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_0537009287.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092870.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092873.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092875.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092876.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092878.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092879.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_0537009288.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092880.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092883.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092884.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092886.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092891.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092893.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092895.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092896.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/anh-nen-chu-meo-de-thuong_05370092897.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/d866fbb97329a8e45f0f05340d36eaac21.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/d866fbb97329a8e45f0f05340d36eaac4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/d866fbb97329a8e45f0f05340d36eaac41.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/d866fbb97329a8e45f0f05340d36eaac71.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/d866fbb97329a8e45f0f05340d36eaac94.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/gallery119.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/gallery178.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/gallery2.jpg44.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/gallery224.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/gallery226.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/gallery357.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/sony-tung-ra-thi-truong-may-ps4-pro-marvels-spider-man-phien-ban-gioi-han-anh-370.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/tải xuống17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/tải xuống19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/webcam logitech69.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/product/xbox-360.jpg" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -153,11 +247,22 @@
       <updated>1624520086056</updated>
       <workItem from="1624520087295" duration="857000" />
       <workItem from="1624520958902" duration="1677000" />
-      <workItem from="1624540636945" duration="1082000" />
+      <workItem from="1624540636945" duration="1711000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
