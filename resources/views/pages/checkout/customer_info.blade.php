@@ -16,7 +16,7 @@
             <div class="panel-body">
 
                 <div class="position-center">
-                    <form role="form"  action="{{URL::to('/update-customer/'.$customer ->customer_id)}}" method="post" enctype="multipart/form-data">
+                    <form role="form" action="{{URL::to('/update-customer/'.$customer ->customer_id)}}" method="post" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         <div class="form-group">
                             <label for="exampleInputEmail1">Tên khách hàng</label>
@@ -30,10 +30,12 @@
                             <label for="exampleInputEmail1">Số điện thoại</label>
                             <input type="text" value="{{$customer->customer_phone}}" name="customer_phone" class="form-control" id="exampleInputEmail1">
                         </div>
-        
+
                         <button type="submit" name="edit_customer" id="edit_customer" class="btn btn-warning">Cập nhật thông tin</button>
+
                     </form>
                 </div>
+                <a href="{{URL::to('/customer-order/'.$customer->customer_id)}}">Xem lịch sử mua hàng</a>
 
             </div>
         </section>

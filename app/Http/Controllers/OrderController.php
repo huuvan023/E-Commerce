@@ -12,6 +12,9 @@ use App\Product;
 use App\statistic;
 use Carbon\Carbon;
 use PDF;
+use App\Brand;
+use App\Slider;
+use App\CategoryProductModel;
 
 class OrderController extends Controller
 {
@@ -307,4 +310,44 @@ class OrderController extends Controller
     	$order = Order::orderby('created_at','DESC')->paginate(10);
     	return view('admin.manage_order')->with(compact('order'));
     }
+	public function history_cus(Request $request, $customer_id){
+        $slider = Slider::orderBy('slider_id','DESC')->where('slider_status','1')->take(4)->get();
+    	$cate_product = CategoryProductModel::where('category_status','0')->orderby('category_id','desc')->get();
+        $brand_product = Brand::where('brand_status','0')->orderby('brand_id','desc')->get(); 
+       
+    	$getorder = Order::where('customer_id',$customer_id)->orderBy('order_id','DESC')->paginate(10);;
+    	return view('pages.history.customer_order')->with('category',$cate_product)->with('brand',$brand_product)->with('slider',$slider)->with('getorder',$getorder);
+    }
+	public function view_order_cus($order_code){
+		$slider = Slider::orderBy('slider_id','DESC')->where('slider_status','1')->take(4)->get();
+    	$cate_product = CategoryProductModel::where('category_status','0')->orderby('category_id','desc')->get();
+        $brand_product = Brand::where('brand_status','0')->orderby('brand_id','desc')->get(); 
+
+
+		$order_details_cus = OrderDetails::with('product')->where('order_code',$order_code)->get();
+		$order_cus = Order::where('order_code',$order_code)->get();
+		foreach($order_cus as $key => $ord){
+			$customer_id = $ord->customer_id;
+			$order_status = $ord->order_status;
+		}
+		$customer = Customer::where('customer_id',$customer_id)->first();
+
+		$order_details_product = OrderDetails::with('product')->where('order_code', $order_code)->get();
+
+		foreach($order_details_product as $key => $order_d){
+
+			$product_coupon = $order_d->product_coupon;
+		}
+		if($product_coupon != 'no'){
+			$coupon = Coupon::where('coupon_code',$product_coupon)->first();
+			$coupon_condition = $coupon->coupon_condition;
+			$coupon_number = $coupon->coupon_number;
+		}else{
+			$coupon_condition = 2;
+			$coupon_number = 0;
+		}
+		
+		return view('pages.history.customer_order_history')->with('category',$cate_product)->with('brand',$brand_product)->with('slider',$slider)->with(compact('order_details_cus','customer','coupon_condition','coupon_number','order_cus','order_status'));
+
+	}
 }

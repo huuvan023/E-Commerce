@@ -124,7 +124,8 @@ Route::get('/print-order/{checkout_code}','OrderController@print_order');
 Route::get('/manage-order','OrderController@manage_order');
 Route::get('/view-order/{order_code}','OrderController@view_order');
 Route::post('/update-order-qty','OrderController@update_order_qty');
-
+Route::get('/customer-order/{customer_id}','OrderController@history_cus');
+Route::get('/view-order-customer/{order_code}','OrderController@view_order_cus');
 
 //Banner
 Route::get('/manage-slider','SliderController@manage_slider');
