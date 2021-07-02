@@ -18,6 +18,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v11.0" nonce="iM9q9cUG"></script>
 </head><!--/head-->
 
 <body>
@@ -322,9 +323,12 @@
                     </div>
                     <div class="col-sm-3">
                         <div class="address">
-                            aa
-                            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FE-Commerce-HCMUE-101413922210584&tabs=timeline&width=300&height=250&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId" width="300" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                                    allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            <div class="fb-page" data-href="https://www.facebook.com/E-Commerce-HCMUE-101413922210584" data-tabs="timeline" data-width="300"
+                                 data-height="250" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true">
+                                <blockquote cite="https://www.facebook.com/E-Commerce-HCMUE-101413922210584" class="fb-xfbml-parse-ignore">
+                                    <a href="https://www.facebook.com/E-Commerce-HCMUE-101413922210584">E-Commerce HCMUE</a>
+                                </blockquote>
+                            </div>
                         </div>
                     </div>
                 </div>
