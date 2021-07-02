@@ -321,9 +321,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-4">
                         <div class="address">
-                            <div class="fb-page" data-href="https://www.facebook.com/E-Commerce-HCMUE-101413922210584" data-tabs="timeline" data-width="250"
+                            <div class="fb-page" data-href="https://www.facebook.com/E-Commerce-HCMUE-101413922210584"
+                                 data-tabs="timeline" data-width="500"
                                  data-height="200" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true">
                                 <blockquote cite="https://www.facebook.com/E-Commerce-HCMUE-101413922210584" class="fb-xfbml-parse-ignore">
                                     <a href="https://www.facebook.com/E-Commerce-HCMUE-101413922210584">E-Commerce HCMUE</a>
@@ -422,7 +423,6 @@
     <script src="{{asset('/public/frontend/js/sweetalert.min.js')}}"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v6.0&appId=2339123679735877&autoLogAppEvents=1"></script>
     <script type="text/javascript">
 
           $(document).ready(function(){
