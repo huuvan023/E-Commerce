@@ -4,16 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HERAVN - Máy Tính Cao Cấp Và Thiết Bị Chơi Game Hàng Đầu</title>
-    <link href="{{asset('public/frontend/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('public/frontend/css/font-awesome.min.css')}}" rel="stylesheet">
-    <link href="{{asset('public/frontend/css/prettyPhoto.css')}}" rel="stylesheet">
-    <link href="{{asset('public/frontend/css/price-range.css')}}" rel="stylesheet">
-    <link href="{{asset('public/frontend/css/animate.css')}}" rel="stylesheet">
-    <link href="{{asset('public/frontend/css/main.css')}}" rel="stylesheet">
-    <link href="{{asset('public/frontend/css/style.css')}}" rel="stylesheet">
-    <link href="{{asset('public/frontend/css/responsive.css')}}" rel="stylesheet">
-     <link href="{{asset('public/frontend/css/sweetalert.css')}}" rel="stylesheet">
-    <link rel="shortcut icon" href="{{('public/frontend/images/favicon.ico')}}">
+    <link href="{{asset('/frontend/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('/frontend/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{asset('/frontend/css/prettyPhoto.css')}}" rel="stylesheet">
+    <link href="{{asset('/frontend/css/price-range.css')}}" rel="stylesheet">
+    <link href="{{asset('/frontend/css/animate.css')}}" rel="stylesheet">
+    <link href="{{asset('/frontend/css/main.css')}}" rel="stylesheet">
+    <link href="{{asset('/frontend/css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('/frontend/css/responsive.css')}}" rel="stylesheet">
+     <link href="{{asset('/frontend/css/sweetalert.css')}}" rel="stylesheet">
+    <link rel="shortcut icon" href="{{('/frontend/images/favicon.ico')}}">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
@@ -61,7 +61,7 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="logo pull-left">
-                            <a href="index.html"><img src="{{('public/frontend/images/logo1.png')}}" alt="" /></a>
+                            <a href="index.html"><img src="{{('/frontend/images/logo1.png')}}" alt="" /></a>
                         </div>
                         <div class="btn-group pull-right">
                             <div class="btn-group">
@@ -188,7 +188,7 @@
                             <div class="item {{$i==1 ? 'active' : '' }}">
 
                                 <div class="col-sm-12">
-                                    <img alt="{{$slide->slider_desc}}" src="{{asset('public/uploads/slider/'.$slide->slider_image)}}" height="200" width="100%" class="img img-responsive">
+                                    <img alt="{{$slide->slider_desc}}" src="{{asset('/uploads/slider/'.$slide->slider_image)}}" height="200" width="100%" class="img img-responsive">
 
                                 </div>
                             </div>
@@ -254,7 +254,7 @@
     </section>
     <section class="video">
       <video autoplay height="700px" width="1500px" controls loop>
-        <source src="{{('public/frontend/video/finish.mp4')}}">
+        <source src="{{('/frontend/video/finish.mp4')}}">
                             </video>
     </section>
 
@@ -273,7 +273,7 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                        <img src="{{('public/frontend/images/maytinh.png')}}" alt="" />
+                                        <img src="{{('/frontend/images/maytinh.png')}}" alt="" />
                                     </div>
 
                                 </a>
@@ -286,7 +286,7 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                         <img src="{{('public/frontend/images/banphim.png')}}" alt="" />
+                                         <img src="{{('/frontend/images/banphim.png')}}" alt="" />
                                     </div>
                                 </a>
                                 <p>Gaming Gear</p>
@@ -298,7 +298,7 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                         <img src="{{('public/frontend/images/taycam.png')}}" alt="" />
+                                         <img src="{{('/frontend/images/taycam.png')}}" alt="" />
                                     </div>
 
                                 </a>
@@ -311,7 +311,7 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                         <img src="{{('public/frontend/images/phukien.png')}}" alt="" />
+                                         <img src="{{('/frontend/images/phukien.png')}}" alt="" />
                                     </div>
 
                                 </a>
@@ -322,7 +322,7 @@
                     </div>
                     <div class="col-sm-3">
                         <div class="address">
-
+                            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FE-Commerce-HCMUE-101413922210584&tabs=timeline&width=300&height=250&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId" width="300" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                         </div>
                     </div>
                 </div>
@@ -405,15 +405,15 @@
 
 
 
-    <script src="{{asset('public/frontend/js/jquery.js')}}"></script>
-    <script src="{{asset('public/frontend/js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('public/frontend/js/jquery.scrollUp.min.js')}}"></script>
-    <script src="{{asset('public/frontend/js/price-range.js')}}"></script>
-    <script src="{{asset('public/frontend/js/jquery.prettyPhoto.js')}}"></script>
-    <script src="{{asset('public/frontend/js/main.js')}}"></script>
+    <script src="{{asset('/frontend/js/jquery.js')}}"></script>
+    <script src="{{asset('/frontend/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('/frontend/js/jquery.scrollUp.min.js')}}"></script>
+    <script src="{{asset('/frontend/js/price-range.js')}}"></script>
+    <script src="{{asset('/frontend/js/jquery.prettyPhoto.js')}}"></script>
+    <script src="{{asset('/frontend/js/main.js')}}"></script>
 
 
-    <script src="{{asset('public/frontend/js/sweetalert.min.js')}}"></script>
+    <script src="{{asset('/frontend/js/sweetalert.min.js')}}"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v6.0&appId=2339123679735877&autoLogAppEvents=1"></script>
