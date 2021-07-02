@@ -188,7 +188,7 @@
                             <div class="item {{$i==1 ? 'active' : '' }}">
 
                                 <div class="col-sm-12">
-                                    <img alt="{{$slide->slider_desc}}" src="{{asset('/uploads/slider/'.$slide->slider_image)}}" height="200" width="100%" class="img img-responsive">
+                                    <img alt="{{$slide->slider_desc}}" src="{{asset('/public/uploads/slider/'.$slide->slider_image)}}" height="200" width="100%" class="img img-responsive">
 
                                 </div>
                             </div>
