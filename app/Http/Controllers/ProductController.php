@@ -13,6 +13,10 @@ use Excel;
 use App\Exports\ExcelExports;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Redirect;
+use Artesaos\SEOTools\Facades\SEOMeta;
+use Artesaos\SEOTools\Facades\OpenGraph;
+use Artesaos\SEOTools\Facades\TwitterCard;
+use Artesaos\SEOTools\Facades\JsonLd;
 
 session_start();
 class ProductController extends Controller
@@ -206,8 +210,18 @@ class ProductController extends Controller
             ->join('tbl_brand', 'tbl_brand.brand_id', '=', 'tbl_product.brand_id')
             ->where('tbl_category_product.category_id', $category_id)->whereNotIn('tbl_product.product_id', [$product_slug])->paginate(6);
 
+        SEOMeta::setTitle("test");
+        SEOMeta::setDescription("test description");
+        SEOMeta::setKeywords("test keywords");
 
-        return view('pages.sanpham.show_details')->with('category', $cate_product)->with('brand', $brand_product)->with('product_details', $details_product)->with('relate', $related_product)->with('meta_desc', $meta_desc)->with('meta_title', $meta_title)->with('url_canonical', $url_canonical)->with('slider', $slider);
+        return view('pages.sanpham.show_details')->with('category', $cate_product)
+            ->with('brand', $brand_product)
+            ->with('product_details', $details_product)
+            ->with('relate', $related_product)
+            ->with('meta_desc', $meta_desc)
+            ->with('meta_title', $meta_title)
+            ->with('url_canonical', $url_canonical)
+            ->with('slider', $slider);
     }
     public function export_csv()
     {
