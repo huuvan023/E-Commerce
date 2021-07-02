@@ -41,7 +41,7 @@
 					<input name="productid_hidden" type="hidden" value="{{$value->product_id}}" />
 				</span>
                 <div class="detail-action">
-                    <input type="button" value="Thêm giỏ hàng" class="btn btn-primary btn-sm" style="margin-top: 0px"
+                    <input type="button" value="Thêm giỏ hàng" class="btn btn-primary btn-sm add-to-cart" style="margin-top: 0px"
                            data-id_product="{{$value->product_id}}" name="add-to-cart">
                     <div class="fb-share-button" style="display: flex; align-items: center; align-content: center"
                          data-href="http://elaravelhcmue.herokuapp.com/chi-tiet/{{$value->product_slug}}"
