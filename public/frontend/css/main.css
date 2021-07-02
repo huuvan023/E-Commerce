@@ -390,7 +390,10 @@ ul.sub-menu {
 .footer-top .col-sm-3{
   overflow: hidden;
 }
-
+.video {
+    display: flex;
+    justify-content: center;
+}
 .video-gallery {
   margin-top: 57px;
   position: inherit;
