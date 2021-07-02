@@ -21,10 +21,10 @@
 	<div class="col-sm-7">
 		<div class="product-information">
 			<!--/product-information-->
-			<img src="images/product-details/new.jpg" class="newarrival" alt="" />
+			<img src="/public/frontend/images/new.jpg" class="newarrival" alt="" />
 			<h2 style="color:red;font-size:35px;font-family: Times New Roman">{{$value->product_name}}</h2>
 			<p>Mã ID: {{$value->product_id}}</p>
-			<img src="images/product-details/rating.png" alt="" />
+			<img src="/public/frontend/images/rating.png" alt="" />
 
 			<form action="{{URL::to('/save-cart')}}" method="POST">
 				@csrf
