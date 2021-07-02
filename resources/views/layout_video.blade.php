@@ -269,7 +269,7 @@
                             <p>Mua PC Gaming,laptop, card màn hình ,màn hình máy tính, thiết bị chơi game như PS5 hàng đầu Việt Nam bảo hành chính hãng .</p>
                         </div>
                     </div>
-                    <div class="col-sm-7">
+                    <div class="col-sm-6">
                         <div class="col-sm-3">
                             <div class="video-gallery text-center">
                                 <a href="#">
@@ -323,8 +323,8 @@
                     </div>
                     <div class="col-sm-3">
                         <div class="address">
-                            <div class="fb-page" data-href="https://www.facebook.com/E-Commerce-HCMUE-101413922210584" data-tabs="timeline" data-width="300"
-                                 data-height="250" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true">
+                            <div class="fb-page" data-href="https://www.facebook.com/E-Commerce-HCMUE-101413922210584" data-tabs="timeline" data-width="250"
+                                 data-height="200" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true">
                                 <blockquote cite="https://www.facebook.com/E-Commerce-HCMUE-101413922210584" class="fb-xfbml-parse-ignore">
                                     <a href="https://www.facebook.com/E-Commerce-HCMUE-101413922210584">E-Commerce HCMUE</a>
                                 </blockquote>
