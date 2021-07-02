@@ -12,7 +12,9 @@ body {
   position: relative;
   font-weight:400px;
 }
-
+.detail-action {
+    margin-bottom: 10px;
+}
 ul li {
   list-style: none;
 }

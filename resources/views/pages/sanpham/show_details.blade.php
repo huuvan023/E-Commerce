@@ -40,7 +40,14 @@
 					<input name="qty" type="number" min="1" class="cart_product_qty_{{$value->product_id}}" value="1" />
 					<input name="productid_hidden" type="hidden" value="{{$value->product_id}}" />
 				</span>
-				<input type="button" value="Thêm giỏ hàng" class="btn btn-primary btn-sm add-to-cart" data-id_product="{{$value->product_id}}" name="add-to-cart">
+                <div class="detail-action">
+                    <input type="button" value="Thêm giỏ hàng" class="btn btn-primary btn-sm" style="margin-top: 0px"
+                           data-id_product="{{$value->product_id}}" name="add-to-cart">
+                    <div class="fb-share-button" style="display: flex; align-items: center; align-content: center"
+                         data-href="http://elaravelhcmue.herokuapp.com/chi-tiet/{{$value->product_slug}}"
+                         data-layout="button_count">
+                    </div>
+                </div>
 			</form>
 
 			<p><b>Tình trạng:</b> Còn hàng</p>
