@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HERAVN - Máy Tính Cao Cấp Và Thiết Bị Chơi Game Hàng Đầu</title>
+    {!! SEOMeta::generate() !!}
     <link href="{{asset('public/frontend/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('public/frontend/css/font-awesome.min.css')}}" rel="stylesheet">
     <link href="{{asset('public/frontend/css/prettyPhoto.css')}}" rel="stylesheet">
