@@ -216,7 +216,7 @@ class ProductController extends Controller
             ->join('tbl_brand', 'tbl_brand.brand_id', '=', 'tbl_product.brand_id')
             ->where('tbl_category_product.category_id', $category_id)->whereNotIn('tbl_product.product_id', [$product_slug])->paginate(6);
 
-        SEOMeta::setTitle($meta_title);
+        SEOMeta::setTitle($meta_title.",".$meta_title.",".$meta_desc);
         SEOMeta::setDescription("Mua hàng online | ".$meta_title." | Mua trả góp, giao nhanh trong vòng 3h. Thanh toán online qua tài khoản ngân hàng hoặc paypal. Click ngay!");
         SEOMeta::setKeywords($meta_title);
         SEOMeta::addMeta("og:description", "Mua hàng online | ".$meta_title." | Mua trả góp, giao nhanh trong vòng 3h. Thanh toán online qua tài khoản ngân hàng hoặc paypal. Click ngay!");
