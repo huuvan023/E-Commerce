@@ -217,7 +217,7 @@ class ProductController extends Controller
             ->where('tbl_category_product.category_id', $category_id)->whereNotIn('tbl_product.product_id', [$product_slug])->paginate(6);
 
         SEOMeta::setTitle($meta_title);
-        SEOMeta::setDescription("Mua online ".$meta_title." ".$meta_desc);
+        SEOMeta::setDescription("Mua hàng online | ".$meta_title." | HERAVN");
         SEOMeta::setKeywords($meta_title);
         SEOMeta::addMeta("og:description", "Mua hàng online | ".$meta_title." | HERAVN");
         SEOMeta::addMeta("og:image", $meta_site_name.$meta_image);
