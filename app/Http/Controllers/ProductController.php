@@ -219,7 +219,7 @@ class ProductController extends Controller
         SEOMeta::setTitle($meta_title);
         SEOMeta::setDescription("Mua online ".$meta_title." ".$meta_desc);
         SEOMeta::setKeywords($meta_title);
-        SEOMeta::addMeta("og:description", "Mua online ".$meta_title." ".$meta_desc);
+        SEOMeta::addMeta("og:description", "Mua hàng online | ".$meta_title." | HERAVN");
         SEOMeta::addMeta("og:image", $meta_site_name.$meta_image);
         SEOMeta::addMeta("og:title", $meta_title." | ".$meta_website_name);
         SEOMeta::addMeta("og:url", $meta_site_name.$meta_url);
