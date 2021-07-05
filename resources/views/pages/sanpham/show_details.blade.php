@@ -46,7 +46,7 @@
                     <div class="fb-share-button" data-href="http://heravn.herokuapp.com"
                          data-layout="button_count"
                          data-size="small"><a target="_blank"
-                         href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fheravn.herokuapp.com%2F&amp;src=sdkpreparse"
+                         href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fheravn.herokuapp.com/chi-tiet/asus-zenbook-duo-14%2F&amp;src=sdkpreparse"
                          class="fb-xfbml-parse-ignore">Chia sẻ</a></div>
                 </div>
 			</form>
