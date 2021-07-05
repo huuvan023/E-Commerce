@@ -422,7 +422,6 @@
 
     <script src="{{asset('/public/frontend/js/sweetalert.min.js')}}"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <div id="fb-root"></div>
     <script type="text/javascript">
 
           $(document).ready(function(){

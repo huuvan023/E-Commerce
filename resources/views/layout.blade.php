@@ -18,7 +18,6 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
-    <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v11.0" nonce="amlNvFog"></script>
 </head><!--/head-->
 
@@ -419,7 +418,6 @@
 
     <script src="{{asset('public/frontend/js/sweetalert.min.js')}}"></script>
     <script src="https://www.paypalobjects.com/api/checkout.js"></script>
-    <div id="fb-root"></div>
     <script>
 var usd = document.getElementById("vnd").value;
   paypal.Button.render({
@@ -567,5 +565,14 @@ $(document).ready(function(){
 </script>
 <noscript><a href="https://www.livechatinc.com/chat-with/12928998/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
 <!-- End of LiveChat code -->
+<script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
 </body>
 </html>

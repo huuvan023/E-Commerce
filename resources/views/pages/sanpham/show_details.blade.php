@@ -43,11 +43,10 @@
                 <div class="detail-action">
                     <input type="button" value="Thêm giỏ hàng" class="btn btn-primary btn-sm add-to-cart" style="margin-top: 0px"
                            data-id_product="{{$value->product_id}}" name="add-to-cart">
-                    <div class="fb-share-button" data-href="http://heravn.herokuapp.com"
-                         data-layout="button_count"
-                         data-size="small"><a target="_blank"
-                         href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fheravn.herokuapp.com/chi-tiet/asus-zenbook-duo-14%2F&amp;src=sdkpreparse"
-                         class="fb-xfbml-parse-ignore">Chia sẻ</a></div>
+                    <div class="fb-share-button"
+                         data-href="http://heravn.herokuapp.com/chi-tiet/{{$value -> product_slug}}"
+                         data-layout="button_count">
+                    </div>
                 </div>
 			</form>
 
