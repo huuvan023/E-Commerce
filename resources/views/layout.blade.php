@@ -62,7 +62,7 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="logo pull-left">
-                            <a href="/"><img src="{{('/public/frontend/images/logo1.png')}}" alt="" /></a>
+                            <a href="/"><img src="{{('/public/frontend/images/logo1.png')}}" alt="image" /></a>
                         </div>
                         <div class="btn-group pull-right">
                             <div class="btn-group">
@@ -271,7 +271,7 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                        <img src="{{('public/frontend/images/maytinh.png')}}" alt="" />
+                                        <img src="{{('public/frontend/images/maytinh.png')}}" alt="image" />
                                     </div>
 
                                 </a>
@@ -284,7 +284,7 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                         <img src="{{('public/frontend/images/banphim.png')}}" alt="" />
+                                         <img src="{{('public/frontend/images/banphim.png')}}" alt="image" />
                                     </div>
                                 </a>
                                 <p>Gaming Gear</p>
@@ -296,7 +296,7 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                         <img src="{{('public/frontend/images/taycam.png')}}" alt="" />
+                                         <img src="{{('public/frontend/images/taycam.png')}}" alt="image" />
                                     </div>
 
                                 </a>
@@ -309,7 +309,7 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                         <img src="{{('public/frontend/images/phukien.png')}}" alt="" />
+                                         <img src="{{('public/frontend/images/phukien.png')}}" alt="image" />
                                     </div>
 
                                 </a>

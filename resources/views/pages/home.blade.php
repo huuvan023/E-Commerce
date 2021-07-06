@@ -19,7 +19,7 @@
 
                                             <a href="{{URL::to('/chi-tiet/'.$product->product_slug)}}">
                                             <div class="image-zoom">
-                                                <p><img src="{{URL::to('public/uploads/product/'.$product->product_image)}}" alt="" /></p>
+                                                <p><img src="{{URL::to('public/uploads/product/'.$product->product_image)}}" alt="image" /></p>
                                                 </div>
                                                 <h2>{{number_format($product->product_price,0,',','.').' '.'VNĐ'}}</h2>
                                                 <p>{{$product->product_name}}</p>
