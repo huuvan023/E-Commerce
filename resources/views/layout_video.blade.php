@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZPXB1B1PB6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-ZPXB1B1PB6');
+    </script>
+    <!-- End - Google Analytics -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HERAVN - Máy Tính Cao Cấp Và Thiết Bị Chơi Game Hàng Đầu</title>
@@ -12,12 +22,13 @@
     <link href="{{asset('/public/frontend/css/main.css')}}" rel="stylesheet">
     <link href="{{asset('/public/frontend/css/style.css')}}" rel="stylesheet">
     <link href="{{asset('/public/frontend/css/responsive.css')}}" rel="stylesheet">
-     <link href="{{asset('/public/frontend/css/sweetalert.css')}}" rel="stylesheet">
-    <link rel="shortcut icon" href="{{('/public/frontend/images/favicon.ico')}}">
+    <link href="{{asset('/public/frontend/css/sweetalert.css')}}" rel="stylesheet">
+    <link rel="shortcut icon" href="{{('/public/frontend/favicon/favicon.svg')}}">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <meta name="google-site-verification" content="ORvgH3B_d929XNhu9nqcUHwu7K-6SopOrYjkKGAfLqI" />
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v11.0" nonce="iM9q9cUG"></script>
 </head><!--/head-->
 
@@ -62,7 +73,7 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="logo pull-left">
-                            <a href="index.html"><img src="{{('/public/frontend/images/logo1.png')}}" alt="" /></a>
+                            <a href="/"><img src="{{('/public/frontend/images/logo1.png')}}" alt="image" /></a>
                         </div>
                         <div class="btn-group pull-right">
                             <div class="btn-group">
@@ -137,7 +148,7 @@
                         </div>
                         <div class="mainmenu pull-left">
                             <ul class="nav navbar-nav collapse navbar-collapse">
-                                <li><a href="{{URL::to('/trang-chu')}}" class="active">Trang chủ</a></li>
+                                <li><a href="{{URL::to('/')}}" class="active">Trang chủ</a></li>
                                 <li class="dropdown"><a href="#">Sản phẩm<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         @foreach($category as $key => $danhmuc)
@@ -274,7 +285,7 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                        <img src="{{('/public/frontend/images/maytinh.png')}}" alt="" />
+                                        <img src="{{('/public/frontend/images/maytinh.png')}}" alt="image" />
                                     </div>
 
                                 </a>
@@ -287,7 +298,7 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                         <img src="{{('/public/frontend/images/banphim.png')}}" alt="" />
+                                         <img src="{{('/public/frontend/images/banphim.png')}}" alt="image" />
                                     </div>
                                 </a>
                                 <p>Gaming Gear</p>
@@ -299,7 +310,7 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                         <img src="{{('/public/frontend/images/taycam.png')}}" alt="" />
+                                         <img src="{{('/public/frontend/images/taycam.png')}}" alt="image" />
                                     </div>
 
                                 </a>
@@ -312,7 +323,7 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                         <img src="{{('/public/frontend/images/phukien.png')}}" alt="" />
+                                         <img src="{{('/public/frontend/images/phukien.png')}}" alt="image" />
                                     </div>
 
                                 </a>
@@ -422,7 +433,6 @@
 
     <script src="{{asset('/public/frontend/js/sweetalert.min.js')}}"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <div id="fb-root"></div>
     <script type="text/javascript">
 
           $(document).ready(function(){
@@ -581,5 +591,6 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 </script>
+
 </body>
 </html>
