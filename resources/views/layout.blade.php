@@ -406,47 +406,7 @@
     <script src="{{asset('public/frontend/js/sweetalert.min.js')}}"></script>
     <script src="https://www.paypalobjects.com/api/checkout.js"></script>
     <div id="fb-root"></div>
-    <script>
-var usd = document.getElementById("vnd").value;
-  paypal.Button.render({
-    // Configure environment
-    env: 'sandbox',
-    client: {
-      sandbox: 'ARMH8dssshct74JjNFckb3frVtX9n2PuHd3nEWf8BDwoR_lrtNBw4Zu9h9-NSumW37TRLZ2KG6PJjFMQ',
-      production: 'demo_production_client_id'
-    },
-    // Customize button (optional)
-    locale: 'en_US',
-    style: {
-      size: 'small',
-      color: 'gold',
-      shape: 'pill',
-    },
 
-    // Enable Pay Now checkout flow (optional)
-    commit: true,
-
-    // Set up a payment
-    payment: function(data, actions) {
-        return actions.payment.create({
-        transactions: [{
-          amount: {
-            total: `${usd}`,
-            currency: 'USD'
-          }
-        }]
-      });
-    },
-    // Execute the payment
-    onAuthorize: function(data, actions) {
-      return actions.payment.execute().then(function() {
-        // Show a confirmation message to the buyer
-        window.alert('Thank you for your purchase!');
-      });
-    }
-  }, '#paypal-button');
-
-</script>
 <script type="text/javascript">
 
 $(document).ready(function(){
