@@ -79,8 +79,8 @@ class PaypalController extends Controller
             ->setInvoiceNumber(uniqid());
         //dd($transaction);
         $redirectUrls = new RedirectUrls();
-        $redirectUrls->setReturnUrl("http://localhost:8080/E-Commerce/execute-payment")
-            ->setCancelUrl("http://localhost:8080/E-Commerce/cancel");
+        $redirectUrls->setReturnUrl("http://heravn.herokuapp.com/execute-payment")
+            ->setCancelUrl("http://heravn.herokuapp.com/cancel");
 
         $payment = new Payment();
         $payment->setIntent("sale")
