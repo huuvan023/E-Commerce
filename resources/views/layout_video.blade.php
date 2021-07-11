@@ -1,26 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZPXB1B1PB6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-ZPXB1B1PB6');
+    </script>
+    <!-- End - Google Analytics -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HERAVN - Máy Tính Cao Cấp Và Thiết Bị Chơi Game Hàng Đầu</title>
-    <link href="{{asset('public/frontend/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('public/frontend/css/font-awesome.min.css')}}" rel="stylesheet">
-    <link href="{{asset('public/frontend/css/prettyPhoto.css')}}" rel="stylesheet">
-    <link href="{{asset('public/frontend/css/price-range.css')}}" rel="stylesheet">
-    <link href="{{asset('public/frontend/css/animate.css')}}" rel="stylesheet">
-    <link href="{{asset('public/frontend/css/main.css')}}" rel="stylesheet">
-    <link href="{{asset('public/frontend/css/style.css')}}" rel="stylesheet">
-    <link href="{{asset('public/frontend/css/responsive.css')}}" rel="stylesheet">
-     <link href="{{asset('public/frontend/css/sweetalert.css')}}" rel="stylesheet">    
-    <link rel="shortcut icon" href="{{('public/frontend/images/favicon.ico')}}">
+    <link href="{{asset('/public/frontend/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('/public/frontend/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{asset('/public/frontend/css/prettyPhoto.css')}}" rel="stylesheet">
+    <link href="{{asset('/public/frontend/css/price-range.css')}}" rel="stylesheet">
+    <link href="{{asset('/public/frontend/css/animate.css')}}" rel="stylesheet">
+    <link href="{{asset('/public/frontend/css/main.css')}}" rel="stylesheet">
+    <link href="{{asset('/public/frontend/css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('/public/frontend/css/responsive.css')}}" rel="stylesheet">
+    <link href="{{asset('/public/frontend/css/sweetalert.css')}}" rel="stylesheet">
+    <link rel="shortcut icon" href="{{('/public/frontend/favicon/favicon.svg')}}">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <meta name="google-site-verification" content="ORvgH3B_d929XNhu9nqcUHwu7K-6SopOrYjkKGAfLqI" />
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v11.0" nonce="iM9q9cUG"></script>
 </head><!--/head-->
 
 <body>
+<!-- Messenger Plugin chat Code -->
+<div id="fb-root"></div>
+
+<!-- Your Plugin chat code -->
+<div id="fb-customer-chat" class="fb-customerchat">
+</div>
+
 
     <header id="header"><!--header-->
         <div class="header_top"><!--header_top-->
@@ -48,73 +67,73 @@
                 </div>
             </div>
         </div><!--/header_top-->
-        
+
         <div class="header-middle"><!--header-middle-->
             <div class="container">
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="logo pull-left">
-                            <a href="index.html"><img src="{{('public/frontend/images/logo1.png')}}" alt="" /></a>
+                            <a href="/"><img src="{{('/public/frontend/images/logo1.png')}}" alt="image" /></a>
                         </div>
                         <div class="btn-group pull-right">
                             <div class="btn-group">
-        
-                              
+
+
                             </div>
-                            
+
                             <div class="btn-group">
-                             
-                            
+
+
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-8">
                         <div class="shop-menu pull-right">
                             <ul class="nav navbar-nav">
-                               
+
                                 <li><a href="#"><i class="fa fa-star"></i> Yêu thích</a></li>
                                 <?php
                                    $customer_id = Session::get('customer_id');
                                    $shipping_id = Session::get('shipping_id');
-                                   if($customer_id!=NULL && $shipping_id==NULL){ 
+                                   if($customer_id!=NULL && $shipping_id==NULL){
                                  ?>
                                   <li><a href="{{URL::to('/checkout')}}"><i class="fa fa-crosshairs"></i> Thanh toán</a></li>
-                                
+
                                 <?php
                                  }elseif($customer_id!=NULL && $shipping_id!=NULL){
                                  ?>
                                  <li><a href="{{URL::to('/payment')}}"><i class="fa fa-crosshairs"></i> Thanh toán</a></li>
-                                 <?php 
+                                 <?php
                                 }else{
                                 ?>
                                  <li><a href="{{URL::to('/dang-nhap')}}"><i class="fa fa-crosshairs"></i> Thanh toán</a></li>
                                 <?php
                                  }
                                 ?>
-                                
+
 
                                 <li><a href="{{URL::to('/gio-hang')}}"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a></li>
                                 <?php
                                    $customer_id = Session::get('customer_id');
-                                   if($customer_id!=NULL){ 
+                                   if($customer_id!=NULL){
                                  ?>
                                   <li><a href="{{URL::to('/logout-checkout')}}"><i class="fa fa-lock"></i> Đăng xuất</a></li>
-                                
+
                                 <?php
                             }else{
                                  ?>
                                  <li><a href="{{URL::to('/dang-nhap')}}"><i class="fa fa-lock"></i> Đăng nhập</a></li>
-                                 <?php 
+                                 <?php
                              }
                                  ?>
-                               
+
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div><!--/header-middle-->
-    
+
         <div class="header-bottom"><!--header-bottom-->
             <div class="container">
                 <div class="row">
@@ -129,17 +148,17 @@
                         </div>
                         <div class="mainmenu pull-left">
                             <ul class="nav navbar-nav collapse navbar-collapse">
-                                <li><a href="{{URL::to('/trang-chu')}}" class="active">Trang chủ</a></li>
+                                <li><a href="{{URL::to('/')}}" class="active">Trang chủ</a></li>
                                 <li class="dropdown"><a href="#">Sản phẩm<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         @foreach($category as $key => $danhmuc)
                                         <li><a href="{{URL::to('/danh-muc/'.$danhmuc->slug_category_product)}}">{{$danhmuc->category_name}}</a></li>
                                         @endforeach
                                     </ul>
-                                </li> 
+                                </li>
                                 <li class="dropdown"><a href="#">Tin tức<i class="fa fa-angle-down"></i></a>
-                                    
-                                </li> 
+
+                                </li>
                                 <li><a href="{{URL::to('/gio-hang')}}">Giỏ hàng</a></li>
                                 <li><a href="{{URL::to('/lien-he')}}">Liên hệ</a></li>
                             </ul>
@@ -158,7 +177,7 @@
             </div>
         </div><!--/header-bottom-->
     </header><!--/header-->
-    
+
     <section id="slider"><!--slider-->
         <div class="container">
             <div class="row">
@@ -169,27 +188,27 @@
                             <li data-target="#slider-carousel" data-slide-to="1"></li>
                             <li data-target="#slider-carousel" data-slide-to="2"></li>
                         </ol>
-                        
+
                         <div class="carousel-inner">
-                        @php 
+                        @php
                             $i = 0;
                         @endphp
                         @foreach($slider as $key => $slide)
-                            @php 
+                            @php
                                 $i++;
                             @endphp
                             <div class="item {{$i==1 ? 'active' : '' }}">
-                               
+
                                 <div class="col-sm-12">
-                                    <img alt="{{$slide->slider_desc}}" src="{{asset('public/uploads/slider/'.$slide->slider_image)}}" height="200" width="100%" class="img img-responsive">
-                                   
+                                    <img alt="{{$slide->slider_desc}}" src="{{asset('/public/uploads/slider/'.$slide->slider_image)}}" height="200" width="100%" class="img img-responsive">
+
                                 </div>
                             </div>
-                        @endforeach  
-                          
-                            
+                        @endforeach
+
+
                         </div>
-                        
+
                         <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
                             <i class="fa fa-angle-left"></i>
                         </a>
@@ -197,12 +216,12 @@
                             <i class="fa fa-angle-right"></i>
                         </a>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
     </section><!--/slider-->
-    
+
     <section>
         <div class="container">
             <div class="row">
@@ -211,7 +230,7 @@
                         <h2>Danh mục sản phẩm</h2>
                         <div class="panel-group category-products" id="accordian"><!--category-productsr-->
                           @foreach($category as $key => $cate)
-                           
+
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
@@ -220,7 +239,7 @@
                             </div>
                         @endforeach
                         </div><!--/category-products-->
-                    
+
                         <div class="brands_products"><!--brands_products-->
                             <h2>Thương hiệu sản phẩm</h2>
                             <div class="brands-name">
@@ -231,26 +250,26 @@
                                 </ul>
                             </div>
                         </div><!--/brands_products-->
-                        
-                     
-                    
+
+
+
                     </div>
                 </div>
-                
+
                 <div class="col-sm-9 padding-right">
 
                    @yield('content')
-                    
+
                 </div>
             </div>
         </div>
     </section>
     <section class="video">
       <video autoplay height="700px" width="1500px" controls loop>
-        <source src="{{('public/frontend/video/finish.mp4')}}">
+        <source src="{{('/public/frontend/video/finish.mp4')}}">
                             </video>
     </section>
-    
+
     <footer id="footer"><!--Footer-->
         <div class="footer-top">
             <div class="container">
@@ -261,67 +280,73 @@
                             <p>Mua PC Gaming,laptop, card màn hình ,màn hình máy tính, thiết bị chơi game như PS5 hàng đầu Việt Nam bảo hành chính hãng .</p>
                         </div>
                     </div>
-                    <div class="col-sm-7">
+                    <div class="col-sm-6">
                         <div class="col-sm-3">
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                        <img src="{{('public/frontend/images/maytinh.png')}}" alt="" />
+                                        <img src="{{('/public/frontend/images/maytinh.png')}}" alt="image" />
                                     </div>
-                                    
+
                                 </a>
                                 <p>PC Gaming</p>
                                 <h2>4 MAY 2021</h2>
                             </div>
                         </div>
-                        
+
                         <div class="col-sm-3">
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                         <img src="{{('public/frontend/images/banphim.png')}}" alt="" />
+                                         <img src="{{('/public/frontend/images/banphim.png')}}" alt="image" />
                                     </div>
                                 </a>
                                 <p>Gaming Gear</p>
                                 <h2>4 MAY 2021</h2>
                             </div>
                         </div>
-                        
+
                         <div class="col-sm-3">
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                         <img src="{{('public/frontend/images/taycam.png')}}" alt="" />
+                                         <img src="{{('/public/frontend/images/taycam.png')}}" alt="image" />
                                     </div>
-                                    
+
                                 </a>
                                 <p>Tay Cầm PS5</p>
                                 <h2>4 MAY 2021</h2>
                             </div>
                         </div>
-                        
+
                         <div class="col-sm-3">
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                         <img src="{{('public/frontend/images/phukien.png')}}" alt="" />
+                                         <img src="{{('/public/frontend/images/phukien.png')}}" alt="image" />
                                     </div>
-                                 
+
                                 </a>
                                 <p>Phụ Kiện Máy Tính</p>
                                 <h2>4 MAY 2021</h2>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-4">
                         <div class="address">
-                            
+                            <div class="fb-page" data-href="https://www.facebook.com/E-Commerce-HCMUE-101413922210584"
+                                 data-tabs="timeline" data-width="500"
+                                 data-height="200" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true">
+                                <blockquote cite="https://www.facebook.com/E-Commerce-HCMUE-101413922210584" class="fb-xfbml-parse-ignore">
+                                    <a href="https://www.facebook.com/E-Commerce-HCMUE-101413922210584">E-Commerce HCMUE</a>
+                                </blockquote>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <div class="footer-widget">
             <div class="container">
                 <div class="row">
@@ -331,7 +356,7 @@
                             <ul class="nav nav-pills nav-stacked">
                                 <li><a href="#">Địa Chỉ : 41 Đặng Thùy Trâm, Phường 13,Quận Bình Thạnh ,TPHCM</a></li>
                                 <li><a href="#">Điện Thoại : 0834475862</a></li>
-                                
+
                             </ul>
                         </div>
                     </div>
@@ -380,36 +405,34 @@
                             </form>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
             <div class="container">
                 <div class="row">
                     <p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
-                
+
                 </div>
             </div>
         </div>
-        
+
     </footer><!--/Footer-->
-    
-
-  
-    <script src="{{asset('public/frontend/js/jquery.js')}}"></script>
-    <script src="{{asset('public/frontend/js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('public/frontend/js/jquery.scrollUp.min.js')}}"></script>
-    <script src="{{asset('public/frontend/js/price-range.js')}}"></script>
-    <script src="{{asset('public/frontend/js/jquery.prettyPhoto.js')}}"></script>
-    <script src="{{asset('public/frontend/js/main.js')}}"></script>
 
 
-    <script src="{{asset('public/frontend/js/sweetalert.min.js')}}"></script>
+
+    <script src="{{asset('/public/frontend/js/jquery.js')}}"></script>
+    <script src="{{asset('/public/frontend/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('/public/frontend/js/jquery.scrollUp.min.js')}}"></script>
+    <script src="{{asset('/public/frontend/js/price-range.js')}}"></script>
+    <script src="{{asset('/public/frontend/js/jquery.prettyPhoto.js')}}"></script>
+    <script src="{{asset('/public/frontend/js/main.js')}}"></script>
+
+
+    <script src="{{asset('/public/frontend/js/sweetalert.min.js')}}"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v6.0&appId=2339123679735877&autoLogAppEvents=1"></script>
     <script type="text/javascript">
 
           $(document).ready(function(){
@@ -447,7 +470,7 @@
                             }
                         });
 
-                        window.setTimeout(function(){ 
+                        window.setTimeout(function(){
                             location.reload();
                         } ,3000);
 
@@ -455,13 +478,13 @@
                         swal("Đóng", "Đơn hàng chưa được gửi, làm ơn hoàn tất đơn hàng", "error");
 
                       }
-              
+
                 });
 
-               
+
             });
         });
-    
+
 
     </script>
     <script type="text/javascript">
@@ -508,7 +531,7 @@
             var ma_id = $(this).val();
             var _token = $('input[name="_token"]').val();
             var result = '';
-           
+
             if(action=='city'){
                 result = 'province';
             }else{
@@ -519,12 +542,12 @@
                 method: 'POST',
                 data:{action:action,ma_id:ma_id,_token:_token},
                 success:function(data){
-                   $('#'+result).html(data);     
+                   $('#'+result).html(data);
                 }
             });
         });
         });
-          
+
     </script>
     <script type="text/javascript">
         $(document).ready(function(){
@@ -541,13 +564,33 @@
                     method: 'POST',
                     data:{matp:matp,maqh:maqh,xaid:xaid,_token:_token},
                     success:function(){
-                       location.reload(); 
+                       location.reload();
                     }
                     });
-                } 
+                }
         });
     });
     </script>
-  
+<script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "101413922210584");
+    chatbox.setAttribute("attribution", "biz_inbox");
+
+    window.fbAsyncInit = function() {
+        FB.init({
+            xfbml            : true,
+            version          : 'v11.0'
+        });
+    };
+
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
 </body>
 </html>

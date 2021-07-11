@@ -13,6 +13,10 @@ use Excel;
 use App\Exports\ExcelExports;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Redirect;
+use Artesaos\SEOTools\Facades\SEOMeta;
+use Artesaos\SEOTools\Facades\OpenGraph;
+use Artesaos\SEOTools\Facades\TwitterCard;
+use Artesaos\SEOTools\Facades\JsonLd;
 
 session_start();
 class ProductController extends Controller
@@ -191,13 +195,19 @@ class ProductController extends Controller
         $details_product = Product::join('tbl_category_product', 'tbl_category_product.category_id', '=', 'tbl_product.category_id')
             ->join('tbl_brand', 'tbl_brand.brand_id', '=', 'tbl_product.brand_id')
             ->where('tbl_product.product_slug', $product_slug)->get();
+        //Seo
+        $meta_site_name = "http://$_SERVER[HTTP_HOST]";
+        $meta_site = "website";
+        $meta_website_name = "HERAVN";
 
         foreach ($details_product as $key => $value) {
             $category_id = $value->category_id;
             //seo
             $meta_desc = $value->product_desc;
             //$meta_keywords = $value->product_slug;
+            $meta_image ="/public/uploads/product/".$value -> product_image;
             $meta_title = $value->product_name;
+            $meta_url = '/chi-tiet/'.$value -> product_slug;
             $url_canonical = $request->url();
             //--seo
         }
@@ -206,8 +216,26 @@ class ProductController extends Controller
             ->join('tbl_brand', 'tbl_brand.brand_id', '=', 'tbl_product.brand_id')
             ->where('tbl_category_product.category_id', $category_id)->whereNotIn('tbl_product.product_id', [$product_slug])->paginate(6);
 
+        SEOMeta::setTitle($meta_title);
+        SEOMeta::setDescription("Mua hàng online | ".$meta_title." | Mua trả góp, giao nhanh trong vòng 3h. Thanh toán online qua tài khoản ngân hàng hoặc paypal. Click ngay!");
+        SEOMeta::setKeywords(str_replace(",,,,",",",preg_replace( "/\r|\n/", ",",$meta_title.",".$meta_title.",".$meta_desc)));
+        SEOMeta::addMeta("og:description", "Mua hàng online | ".$meta_title." | Mua trả góp, giao nhanh trong vòng 3h. Thanh toán online qua tài khoản ngân hàng hoặc paypal. Click ngay!");
+        SEOMeta::addMeta("og:image", $meta_site_name.$meta_image);
+        SEOMeta::addMeta("og:title", $meta_title." | ".$meta_website_name);
+        SEOMeta::addMeta("og:url", $meta_site_name.$meta_url);
+        SEOMeta::addMeta("og:type", $meta_site);
+        SEOMeta::addMeta("og:site_name", $meta_site_name);
+        SEOMeta::addMeta("og:locale", "vi_VN");
 
-        return view('pages.sanpham.show_details')->with('category', $cate_product)->with('brand', $brand_product)->with('product_details', $details_product)->with('relate', $related_product)->with('meta_desc', $meta_desc)->with('meta_title', $meta_title)->with('url_canonical', $url_canonical)->with('slider', $slider);
+
+        return view('pages.sanpham.show_details')->with('category', $cate_product)
+            ->with('brand', $brand_product)
+            ->with('product_details', $details_product)
+            ->with('relate', $related_product)
+            ->with('meta_desc', $meta_desc)
+            ->with('meta_title', $meta_title)
+            ->with('url_canonical', $url_canonical)
+            ->with('slider', $slider);
     }
     public function export_csv()
     {

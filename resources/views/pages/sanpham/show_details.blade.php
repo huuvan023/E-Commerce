@@ -8,7 +8,7 @@
 	@foreach($product_details as $key => $value)
 		<div class="view-product">
 			<div class="image-zoom">
-				<p><img src="{{URL::to('/public/uploads/product/'.$value->product_image)}}" alt="" /></p>
+				<p><img src="{{URL::to('/public/uploads/product/'.$value->product_image)}}" alt="image" /></p>
 			</div>
 			<h3>ZOOM</h3>
 		</div>
@@ -21,10 +21,10 @@
 	<div class="col-sm-7">
 		<div class="product-information">
 			<!--/product-information-->
-			<img src="images/product-details/new.jpg" class="newarrival" alt="" />
+			<img src="/public/frontend/images/new.jpg" class="newarrival" alt="image" />
 			<h2 style="color:red;font-size:35px;font-family: Times New Roman">{{$value->product_name}}</h2>
 			<p>Mã ID: {{$value->product_id}}</p>
-			<img src="images/product-details/rating.png" alt="" />
+			<img src="/public/frontend/images/rating.png" alt="image" />
 
 			<form action="{{URL::to('/save-cart')}}" method="POST">
 				@csrf
@@ -40,14 +40,21 @@
 					<input name="qty" type="number" min="1" class="cart_product_qty_{{$value->product_id}}" value="1" />
 					<input name="productid_hidden" type="hidden" value="{{$value->product_id}}" />
 				</span>
-				<input type="button" value="Thêm giỏ hàng" class="btn btn-primary btn-sm add-to-cart" data-id_product="{{$value->product_id}}" name="add-to-cart">
+                <div class="detail-action">
+                    <input type="button" value="Thêm giỏ hàng" class="btn btn-primary btn-sm add-to-cart" style="margin-top: 0px"
+                           data-id_product="{{$value->product_id}}" name="add-to-cart">
+                    <div class="fb-share-button"
+                         data-href="http://heravn.herokuapp.com/chi-tiet/{{$value -> product_slug}}"
+                         data-layout="button_count">
+                    </div>
+                </div>
 			</form>
 
 			<p><b>Tình trạng:</b> Còn hàng</p>
 			<p><b>Điều kiện:</b> Mới 100%</p>
 			<p><b>Thương hiệu:</b> {{$value->brand_name}}</p>
 			<p><b>Danh mục:</b> {{$value->category_name}}</p>
-			<a href=""><img src="images/product-details/share.png" class="share img-responsive" alt="" /></a>
+			<a href=""><img src="images/product-details/share.png" class="share img-responsive" alt="image" /></a>
 		</div>
 		<!--/product-information-->
 	</div>
@@ -92,7 +99,7 @@
 						<input type="email" placeholder="Email Address" />
 					</span>
 					<textarea name=""></textarea>
-					<b>Rating: </b> <img src="images/product-details/rating.png" alt="" />
+					<b>Rating: </b> <img src="images/product-details/rating.png" alt="image" />
 					<button type="button" class="btn btn-default pull-right">
 						Submit
 					</button>
@@ -125,7 +132,7 @@
 
 									<a href="{{URL::to('/chi-tiet/'.$lienquan->product_slug)}}">
 										<div class="image-zoom">
-											<p> <img src="{{URL::to('public/uploads/product/'.$lienquan->product_image)}}" alt="" /></p>
+											<p> <img src="{{URL::to('public/uploads/product/'.$lienquan->product_image)}}" alt="image" /></p>
 										</div>
 										<h2>{{number_format($lienquan->product_price).' '.'VNĐ'}}</h2>
 										<p>{{$lienquan->product_name}}</p>

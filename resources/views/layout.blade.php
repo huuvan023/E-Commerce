@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZPXB1B1PB6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-ZPXB1B1PB6');
+    </script>
+    <!-- End - Google Analytics -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HERAVN - Máy Tính Cao Cấp Và Thiết Bị Chơi Game Hàng Đầu</title>
+    {!! SEOMeta::generate() !!}
     <link href="{{asset('public/frontend/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('public/frontend/css/font-awesome.min.css')}}" rel="stylesheet">
     <link href="{{asset('public/frontend/css/prettyPhoto.css')}}" rel="stylesheet">
@@ -13,14 +23,32 @@
     <link href="{{asset('public/frontend/css/style.css')}}" rel="stylesheet">
     <link href="{{asset('public/frontend/css/responsive.css')}}" rel="stylesheet">
      <link href="{{asset('public/frontend/css/sweetalert.css')}}" rel="stylesheet">
-    <link rel="shortcut icon" href="{{('public/frontend/images/favicon.ico')}}">
+    <link rel="shortcut icon" href="{{('/public/frontend/favicon/favicon.svg')}}">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <meta name="google-site-verification" content="ORvgH3B_d929XNhu9nqcUHwu7K-6SopOrYjkKGAfLqI" />
+    <!-- Đánh dấu JSON-LD được tạo bởi Trình trợ giúp đánh dấu dữ liệu có cấu trúc của Google. -->
+    <script type="application/ld+json">
+        {
+          "@context" : "http://schema.org",
+          "@type" : "LocalBusiness",
+          "name" : "heravn",
+          "image" : "http://heravn.herokuapp.com/public/frontend/images/logo1.png",
+          "telephone" : "0834475862"
+        }
+    </script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v11.0" nonce="amlNvFog"></script>
 </head><!--/head-->
 
 <body>
+<!-- Messenger Plugin chat Code -->
+<div id="fb-root"></div>
+
+<!-- Your Plugin chat code -->
+<div id="fb-customer-chat" class="fb-customerchat">
+</div>
 
     <header id="header"><!--header-->
         <div class="header_top"><!--header_top-->
@@ -54,7 +82,7 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="logo pull-left">
-                            <a href="index.html"><img src="{{('public/frontend/images/logo1.png')}}" alt="" /></a>
+                            <a href="/"><img src="{{('/public/frontend/images/logo1.png')}}" alt="image" /></a>
                         </div>
                         <div class="btn-group pull-right">
                             <div class="btn-group">
@@ -132,7 +160,7 @@
                         </div>
                         <div class="mainmenu pull-left">
                             <ul class="nav navbar-nav collapse navbar-collapse">
-                                <li><a href="{{URL::to('/trang-chu')}}" class="active">Trang chủ</a></li>
+                                <li><a href="{{URL::to('/')}}" class="active">Trang chủ</a></li>
                                 <li class="dropdown"><a href="#">Sản phẩm<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         @foreach($category as $key => $danhmuc)
@@ -258,12 +286,12 @@
                             <p>Mua PC Gaming,laptop, card màn hình ,màn hình máy tính, thiết bị chơi game như PS5 hàng đầu Việt Nam bảo hành chính hãng .</p>
                         </div>
                     </div>
-                    <div class="col-sm-7">
+                    <div class="col-sm-6">
                         <div class="col-sm-3">
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                        <img src="{{('public/frontend/images/maytinh.png')}}" alt="" />
+                                        <img src="{{('public/frontend/images/maytinh.png')}}" alt="image" />
                                     </div>
 
                                 </a>
@@ -276,7 +304,7 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                         <img src="{{('public/frontend/images/banphim.png')}}" alt="" />
+                                         <img src="{{('public/frontend/images/banphim.png')}}" alt="image" />
                                     </div>
                                 </a>
                                 <p>Gaming Gear</p>
@@ -288,7 +316,7 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                         <img src="{{('public/frontend/images/taycam.png')}}" alt="" />
+                                         <img src="{{('public/frontend/images/taycam.png')}}" alt="image" />
                                     </div>
 
                                 </a>
@@ -301,7 +329,7 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                         <img src="{{('public/frontend/images/phukien.png')}}" alt="" />
+                                         <img src="{{('public/frontend/images/phukien.png')}}" alt="image" />
                                     </div>
 
                                 </a>
@@ -310,9 +338,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-4">
                         <div class="address">
-
+                            <div class="fb-page" data-href="https://www.facebook.com/E-Commerce-HCMUE-101413922210584"
+                                 data-tabs="timeline" data-width="500"
+                                 data-height="200" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true">
+                                <blockquote cite="https://www.facebook.com/E-Commerce-HCMUE-101413922210584" class="fb-xfbml-parse-ignore">
+                                    <a href="https://www.facebook.com/E-Commerce-HCMUE-101413922210584">E-Commerce HCMUE</a>
+                                </blockquote>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -405,8 +439,6 @@
 
     <script src="{{asset('public/frontend/js/sweetalert.min.js')}}"></script>
     <script src="https://www.paypalobjects.com/api/checkout.js"></script>
-    <div id="fb-root"></div>
-
 <script type="text/javascript">
 
 $(document).ready(function(){
@@ -505,6 +537,22 @@ $(document).ready(function(){
             });
         });
 </script>
-
+<!-- Start of LiveChat (www.livechatinc.com) code -->
+<script>
+    window.__lc = window.__lc || {};
+    window.__lc.license = 12928998;
+    ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
+</script>
+<noscript><a href="https://www.livechatinc.com/chat-with/12928998/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
+<!-- End of LiveChat code -->
+<script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
 </body>
 </html>
