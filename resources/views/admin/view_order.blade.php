@@ -82,7 +82,7 @@
              <td>{{$shipping->shipping_phone}}</td>
              <td>{{$shipping->shipping_email}}</td>
              <td>{{$shipping->shipping_notes}}</td>
-             <td>@if($shipping->shipping_method==0) Chuyển khoản @else Tiền mặt @endif</td>
+             <td>@if($shipping->shipping_method==2) Thanh toán PayPal @else Tiền mặt @endif</td>
             
           
           </tr>
@@ -197,7 +197,7 @@
           <tr>
             <td colspan="2">
               @foreach($order as $key => $or)
-                @if($or->order_status==1)  <!--neu don hang ch xu li   --->
+                @if($or->order_status==1 || $or->order_status==3 )  <!--neu don hang ch xu li   --->
                 <form>
                    @csrf
                   <select class="form-control order_details">

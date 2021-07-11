@@ -79,6 +79,7 @@ class CartController extends Controller
                 'product_image' => $data['cart_product_image'],
                 'product_qty' => $data['cart_product_qty'],
                 'product_price' => $data['cart_product_price'],
+            
                 );
                 Session::put('cart',$cart);
             }
@@ -90,7 +91,7 @@ class CartController extends Controller
                 'product_image' => $data['cart_product_image'],
                 'product_qty' => $data['cart_product_qty'],
                 'product_price' => $data['cart_product_price'],
-
+              
             );
             Session::put('cart',$cart);
         }
