@@ -143,7 +143,10 @@ Route::get('success','PaypalController@success');
 
 Route::get('cancel','PaypalController@cancel');
 
-
+//Mail chimp
+Route::post('/send-email',"ContactController@sendemailPost");
+Route::get('/all-email',"ContactController@all_email");
+Route::post('/export-csv-email',"ContactController@export_csv_email");
 //VNPay
 Route::post('/vnpay-payment','VNPayController@vnpay_payment' );
 
