@@ -20,7 +20,7 @@
 
 				<div class="col-sm-12 clearfix">
 					<div class="bill-to">
-						<p>Điền thông tin gửi hàng</p>
+						<h3>Điền thông tin gửi hàng</h3>
 						<div class="form-one">
 
 							<form method="POST">
@@ -42,17 +42,34 @@
 
 
 
-								<div class="">
-									<div class="form-group">
-										<label for="exampleInputPassword1">Chọn hình thức thanh toán</label>
-										<select name="payment_select" class="form-control input-sm m-bot15 payment_select">
-											<option value="0">Qua chuyển khoản</option>
-											<option value="1">Tiền mặt</option>
-										</select>
+								<div class="list-group">
+									<div class="mypage_tt">
+										<h4>Phương thức thanh toán</h4>
+									</div>
+									<div class="custom-control custom-radio list-group-item">
+										<input type="button" style="border-radius: 50%;background-color:blue;color:white;" class="custom-control-input blue-input send_order" id="cod" name="send_order" value="Chọn">
+										<label class="custom-control-label" for="pm_cod">Thanh toán khi nhận hàng (COD)</label>
+									</div>
+
+									<div class="custom-control custom-radio list-group-item">
+										<input type="button" style="border-radius: 50%;background-color:blue;color:white;" class="custom-control-input blue-input send_order_vnpay" id="vnpay" name="send_order_vnpay" value="Chọn">
+										<label class="custom-control-label " for="vnpay">
+											<img src="{{('public/frontend/images/logo-vnpay.png')}}" /> Thanh toán online qua VNPAY
+										</label>
 									</div>
 								</div>
-								<input type="button" value="Xác nhận đơn hàng" name="send_order" class="btn btn-primary btn-sm send_order">
 							</form>
+			
+							<form action="{{URL::to('/create-payment')}}" method="post">
+								@csrf
+								<div id="paypal-button">
+									<input type="image" src='https://www.paypalobjects.com/marketing/web/vn/manage-my-paypal-account/PP-AcceptanceMarkTray-NoDiscover-243x40-optimised.png' alt='Submit' />
+								</div>
+							</form>
+						</div>
+						<div class="row">
+
+
 
 						</div>
 						<div class="table-responsive cart_info">
@@ -153,12 +170,9 @@
 											$vnd= $total/23016;
 											@endphp
 
-											<form action="{{URL::to('/create-payment')}}" method="post">
-												@csrf
-												<div id="paypal-button">
-													<input type="image" src='https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_150x38.png' alt='Submit' />
-												</div>
-											</form>
+
+
+
 										</div>
 									</td>
 									</tr>

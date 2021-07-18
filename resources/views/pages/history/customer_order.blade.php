@@ -50,13 +50,15 @@
                         <td><i>{{$i}}</i></label></td>
                         <td>{{ $ord->order_code }}</td>
                         <td>{{ $ord->created_at }}</td>
-                        <td>@if($ord->order_status==1)
-                            Đang chờ xử lý
-                            @else
-                            Đã xử lý-Đã giao hàng
+                        <td>@if($ord->order_status==3)
+                            Đã thanh toán Paypal
+                            @elseif ($ord->order_status==1)
+                            Đơn hàng mới
+                            @elseif($ord->order_status==4)
+                            Đã thanh toán VNPay
+                            @else Đã xử lí-Đã giao hàng
                             @endif
                         </td>
-
 
                         <td>
                             <a href="{{URL::to('/view-order-customer/'.$ord->order_code)}}" class="active styling-edit" ui-toggle-class="">
