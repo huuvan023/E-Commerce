@@ -28,7 +28,7 @@ class VNPayController extends Controller
     public function vnpay(Request $request)
     {
         //slide
-
+        if(Session::get('cart') == true) {
         $slider = Slider::orderBy('slider_id', 'DESC')->where('slider_status', '1')->take(4)->get();
         $cate_product = CategoryProductModel::where('category_status', '0')->orderby('category_id', 'desc')->get();
         $brand_product = Brand::where('brand_status', '0')->orderby('brand_id', 'desc')->get();
@@ -44,6 +44,8 @@ class VNPayController extends Controller
         }
 
         return view('pages.vnpay.index')->with('category', $cate_product)->with('brand', $brand_product)->with('slider', $slider)->with('subtotal', $subtotal);
+    }
+    else  echo "Vui lòng thêm sản phẩm vào giỏ hàng";
 
 
         // return view('pages.home')->with(compact('cate_product','brand_product','all_product')); //2
