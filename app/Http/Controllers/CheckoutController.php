@@ -24,12 +24,8 @@ class CheckoutController extends Controller
     
     public function confirm_order(Request $request){
          $data = $request->all();
-         $coupon= Coupon::where('coupon_code',$data['order_coupon'])->first();
-         if($coupon){
-         $coupon->coupon_time=$coupon-> coupon_time - 1;
-         $coupon->save();
-         }
-    
+  
+        if($data['shipping_method'] == 0){
          $shipping = new Shipping();
          $shipping->shipping_name = $data['shipping_name'];
          $shipping->shipping_email = $data['shipping_email'];
@@ -71,8 +67,8 @@ class CheckoutController extends Controller
         
          Session::forget('coupon');
          Session::forget('cart');
+        }
     }
-
 
      public function AuthLogin(){
         $admin_id = Session::get('admin_id');

@@ -48,14 +48,14 @@ class PaypalController extends Controller
             $quantity = (int)$element['product_qty'];
             $sku = $element['product_id'];
             $price = $element['product_price'];
-            $total = $element['product_qty'] * round($element['product_price'] / 22957, 91, 2);
+            $total = $element['product_qty'] * round($element['product_price'] / 23000, 2);
 
             $subtotal += $total;
             $item->setName($name)
                 ->setCurrency('USD')
                 ->setQuantity($quantity)
                 ->setSku($sku)
-                ->setPrice($price /  22957, 91);
+                ->setPrice($price /  23000);
             $result[] = $item;
         }
 
@@ -111,14 +111,14 @@ class PaypalController extends Controller
             $quantity = (int)$element['product_qty'];
             $sku = $element['product_id'];
             $price = $element['product_price'];
-            $total = $element['product_qty'] * round($element['product_price'] / 22957, 91, 2);
+            $total = $element['product_qty'] * round($element['product_price'] / 23000, 2);
             $subtotal += $total;
             $item = new Item();
             $item->setName($name)
                 ->setCurrency('USD')
                 ->setQuantity($quantity)
                 ->setSku($sku) // Similar to `item_number` in Classic API
-                ->setPrice($price /  22957, 91);
+                ->setPrice($price /  23000);
             $results[] = $item;
         }
 
@@ -145,55 +145,58 @@ class PaypalController extends Controller
         $execution->addTransaction($transaction);
         $result = $payment->execute($execution, $apiContext);
         // dd($result);
-        $shipping = new Shipping();
-        $shipping->shipping_name = $result->payer->payer_info->shipping_address->recipient_name;
-        $shipping->shipping_email = $result->payer->payer_info->email;
-        $shipping->shipping_phone = $result->payer->payer_info->email;
-        $line1 = $result->payer->payer_info->shipping_address->line1;
-        $line2 = $result->payer->payer_info->shipping_address->line2;
-        $city = $result->payer->payer_info->shipping_address->city;
-        $shipping->shipping_address = $line1 . ' ' . $line2 . ' ' . $city;
-        $shipping->shipping_notes = 'Không';
-        $shipping->shipping_method = 2;
-        $shipping->save();
-        $shipping_id = $shipping->shipping_id;
+        if ($result->state == 'approved') {
+            $shipping = new Shipping();
+            $shipping->shipping_name = $result->payer->payer_info->shipping_address->recipient_name;
+            $shipping->shipping_email = $result->payer->payer_info->email;
+            $shipping->shipping_phone = $result->payer->payer_info->email;
+            $line1 = $result->payer->payer_info->shipping_address->line1;
+            $line2 = $result->payer->payer_info->shipping_address->line2;
+            $city = $result->payer->payer_info->shipping_address->city;
+            $shipping->shipping_address = $line1 . ' ' . $line2 . ' ' . $city;
+            $shipping->shipping_notes = 'Không';
+            $shipping->shipping_method = 2;
+            $shipping->save();
+            $shipping_id = $shipping->shipping_id;
 
-        $checkout_code = substr(md5(microtime()), rand(0, 26), 5);
-
-
-        $order = new Order;
-        $order->customer_id = Session::get('customer_id');
-        $order->shipping_id = $shipping_id;
-        $order->order_status = 3;
-        $order->order_code = $checkout_code;
-        date_default_timezone_set('Asia/Ho_Chi_Minh');
-        $today = Carbon::now('Asia/Ho_Chi_Minh')->format('Y-m-d H:i:s');
-        $order_date = Carbon::now('Asia/Ho_Chi_Minh')->format('Y-m-d');
-        $order->created_at = $today;
-        $order->order_date = $order_date;
-
-        $order->save();
+            $checkout_code = substr(md5(microtime()), rand(0, 26), 5);
 
 
-        if (Session::get('cart') == true) {
-            foreach (Session::get('cart') as $key => $cart) {
-                $order_details = new OrderDetails;
-                $order_details->order_code = $checkout_code;
-                $order_details->product_id = $cart['product_id'];
-                $order_details->product_name = $cart['product_name'];
-                $order_details->product_price = $cart['product_price'];
-                $order_details->product_sales_quantity = $cart['product_qty'];
-                $order_details->product_coupon =  'no';
-                $order_details->save();
+            $order = new Order;
+            $order->customer_id = Session::get('customer_id');
+            $order->shipping_id = $shipping_id;
+            $order->order_status = 3;
+            $order->order_code = $checkout_code;
+            date_default_timezone_set('Asia/Ho_Chi_Minh');
+            $today = Carbon::now('Asia/Ho_Chi_Minh')->format('Y-m-d H:i:s');
+            $order_date = Carbon::now('Asia/Ho_Chi_Minh')->format('Y-m-d');
+            $order->created_at = $today;
+            $order->order_date = $order_date;
+
+            $order->save();
+
+
+            if (Session::get('cart') == true) {
+                foreach (Session::get('cart') as $key => $cart) {
+                    $order_details = new OrderDetails;
+                    $order_details->order_code = $checkout_code;
+                    $order_details->product_id = $cart['product_id'];
+                    $order_details->product_name = $cart['product_name'];
+                    $order_details->product_price = $cart['product_price'];
+                    $order_details->product_sales_quantity = $cart['product_qty'];
+                    $order_details->product_coupon =  'no';
+                    $order_details->save();
+                }
             }
-        }
 
-        Session::forget('coupon');
-        Session::forget('cart');
-        return Redirect::to('success');
+            Session::forget('coupon');
+            Session::forget('cart');
+            return Redirect::to('success');
+        } else return Redirect::to('cancel');
     }
-    public function success()
+    public function success(Request $request)
     {
+
         return view('pages.paypal.success');
     }
     public function cancel()
