@@ -136,7 +136,6 @@ Route::get('/active-slider/{slider_id}','SliderController@active_slider');
 Route::get('/delete-slider/{slider_id}','SliderController@delete_slider');
 
 
-
 //Paypal
 Route::get('execute-payment','PaypalController@execute');
 Route::post('create-payment','PaypalController@create')->name('create-payment');
@@ -144,9 +143,15 @@ Route::get('success','PaypalController@success');
 
 Route::get('cancel','PaypalController@cancel');
 
-
-//End
-//Contact
+//Mail chimp
 Route::post('/send-email',"ContactController@sendemailPost");
 Route::get('/all-email',"ContactController@all_email");
 Route::post('/export-csv-email',"ContactController@export_csv_email");
+//VNPay
+Route::post('/vnpay-payment','VNPayController@vnpay_payment' );
+
+Route::get('/create-payment-vnpay','VNPayController@vnpay' );
+
+Route::post('/create-payment-online','VNPayController@create_payment_online' )->name('create-payment-online');;
+
+Route::get('/vnpay-return','VNPayController@vnpay_return' )->name('vnpay-return');

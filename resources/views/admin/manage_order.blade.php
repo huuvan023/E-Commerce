@@ -46,6 +46,8 @@
             Đã thanh toán Paypal
                 @elseif ($ord->order_status==1)
               Đơn hàng mới
+              @elseif($ord->order_status==4)
+              Đã thanh toán VNPay
                   @else Đã xử lí-Đã giao hàng
                 @endif
             </td>

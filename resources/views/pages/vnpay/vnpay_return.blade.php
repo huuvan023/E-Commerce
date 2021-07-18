@@ -14,6 +14,21 @@
 </head>
 <body>
 		
+<div class="ScriptTop">
+    <div class="rt-container">
+        <div class="col-rt-4" id="float-right">
+ 
+            <!-- Ad Here -->
+            
+        </div>
+        <div class="col-rt-2">
+            <ul>
+                <li><a href="{{URL::to('/checkout')}}" title="Back to tutorial page">Back to Checkout</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
 <header class="ScriptHeader">
     <div class="rt-container">
     	<div class="col-rt-12">
