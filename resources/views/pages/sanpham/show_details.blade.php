@@ -22,7 +22,7 @@
 		<div class="product-information">
 			<!--/product-information-->
 			<img src="/public/frontend/images/new.jpg" class="newarrival" alt="image" />
-			<h2 style="color:red;font-size:35px;font-family: Times New Roman">{{$value->product_name}}</h2>
+			<h1 style="color:red;font-size:35px;font-family: Times New Roman">{{$value->product_name}}</h1>
 			<p>Mã ID: {{$value->product_id}}</p>
 			<img src="/public/frontend/images/rating.png" alt="image" />
 
@@ -50,10 +50,11 @@
                 </div>
 			</form>
 
-			<p><b>Tình trạng:</b> Còn hàng</p>
-			<p><b>Điều kiện:</b> Mới 100%</p>
-			<p><b>Thương hiệu:</b> {{$value->brand_name}}</p>
-			<p><b>Danh mục:</b> {{$value->category_name}}</p>
+
+            <p>Tình trạng: <b style="text-transform: uppercase">Còn hàng</b></p>
+            <p>Điều kiện: <b style="text-transform: uppercase">Mới 100%</b></p>
+			<p>Thương hiệu: <b style="text-transform: uppercase">{{$value->brand_name}}</b></p>
+            <p>Danh mục: <b style="text-transform: uppercase">{{$value->category_name}}</b></p>
 			<a href=""><img src="images/product-details/share.png" class="share img-responsive" alt="image" /></a>
 		</div>
 		<!--/product-information-->
