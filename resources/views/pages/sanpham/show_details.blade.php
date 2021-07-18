@@ -55,7 +55,6 @@
             <p>Điều kiện: <b style="text-transform: uppercase">Mới 100%</b></p>
 			<p>Thương hiệu: <b style="text-transform: uppercase">{{$value->brand_name}}</b></p>
             <p>Danh mục: <b style="text-transform: uppercase">{{$value->category_name}}</b></p>
-			<a href=""><img src="images/product-details/share.png" class="share img-responsive" alt="image" /></a>
 		</div>
 		<!--/product-information-->
 	</div>
@@ -100,7 +99,6 @@
 						<input type="email" placeholder="Email Address" />
 					</span>
 					<textarea name=""></textarea>
-					<b>Rating: </b> <img src="images/product-details/rating.png" alt="image" />
 					<button type="button" class="btn btn-default pull-right">
 						Submit
 					</button>
