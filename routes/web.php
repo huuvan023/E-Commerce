@@ -144,7 +144,9 @@ Route::get('success','PaypalController@success');
 
 Route::get('cancel','PaypalController@cancel');
 
+
+//End
 //Contact
-Route::post('/send-email','ContactController@sendemailPost');
-Route::get('/all-email','ContactController@all_email');
-Route::post('/export-csv-email','ContactController@export_csv_email');
+Route::post('/send-email',"ContactController@sendemailPost");
+Route::get('/all-email',"ContactController@all_email");
+Route::post('/export-csv-email',"ContactController@export_csv_email");
