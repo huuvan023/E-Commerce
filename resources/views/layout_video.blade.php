@@ -397,11 +397,14 @@
                     </div>
                     <div class="col-sm-3 col-sm-offset-1">
                         <div class="single-widget">
-                            <h2>Mua hàng với nhiều ưu đã hơn tại HeraVN :</h2>
-                            <form action="#" class="searchform">
-                                <input type="text" placeholder="Nhập email của bạn" />
-                                <button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
-                                <p> SHOP CÔNG NGHỆ <br />Phụ Kiện Và Đồ Trang Trí Máy Tính</p>
+                            <h2>Đăng ký Email với nhiều ưu đã hơn tại HeraVN :</h2>
+                            <form action="{{ url('/send-email')}}" method="post">
+                            <div class="form-group">
+                            <label for="exampleInputEmail">Email</label>
+                            <input type="email" name="email" id="exampleInputEmail" class="form-control">
+                            </div>
+                            {{ csrf_field() }}
+                            <button type="submit" class="btn btn-primary">Đăng ký</button>
                             </form>
                         </div>
                     </div>
@@ -590,6 +593,15 @@
         js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<script>
+@if (session('alert'))
+    swal("{{ session('alert') }}");
+@endif
+@if (session('alert2'))
+    swal("{{ session('alert2') }}");
+@endif
 </script>
 
 </body>

@@ -143,7 +143,6 @@ Route::get('success','PaypalController@success');
 
 Route::get('cancel','PaypalController@cancel');
 
-
 //VNPay
 Route::post('/vnpay-payment','VNPayController@vnpay_payment' );
 

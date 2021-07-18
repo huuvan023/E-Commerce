@@ -291,7 +291,7 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                        <img src="{{('public/frontend/images/maytinh.png')}}" alt="image" />
+                                        <img src="{{('/public/frontend/images/maytinh.png')}}" alt="image" />
                                     </div>
 
                                 </a>
@@ -304,7 +304,7 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                         <img src="{{('public/frontend/images/banphim.png')}}" alt="image" />
+                                         <img src="{{('/public/frontend/images/banphim.png')}}" alt="image" />
                                     </div>
                                 </a>
                                 <p>Gaming Gear</p>
@@ -316,7 +316,7 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                         <img src="{{('public/frontend/images/taycam.png')}}" alt="image" />
+                                         <img src="{{('/public/frontend/images/taycam.png')}}" alt="image" />
                                     </div>
 
                                 </a>
@@ -329,7 +329,7 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                         <img src="{{('public/frontend/images/phukien.png')}}" alt="image" />
+                                         <img src="{{('/public/frontend/images/phukien.png')}}" alt="image" />
                                     </div>
 
                                 </a>
