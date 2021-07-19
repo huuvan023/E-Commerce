@@ -60,7 +60,7 @@
 										
 										<label class="custom-control-label" for="pm_cod">
 										<submit  class="custom-control-input blue-input send_order" id="cod" name="send_order"/>
-										<img  src="https://static.fado.vn/uploads/payment-method/2021/01/08/Fado.VN_1610090377.8367.svg"  width="60px"/> Thanh toán khi nhận hàng (COD)
+										<img  id="img" src="https://static.fado.vn/uploads/payment-method/2021/01/08/Fado.VN_1610090377.8367.svg"  width="60px" height="50px"/> Thanh toán khi nhận hàng (COD)
 										</label>
 									</div>
 
@@ -81,13 +81,13 @@
 
 		<div class="col-sm-12 col-md-5" id="note"> 
       <div class="note-label is-dot-list mz-mb-2">
-        Quý khách có thể nhanh chóng thanh toán đơn hàng . Thời gian thanh toán đơn hàng không bó buộc trong giờ hành chính và có thể giao dịch 24/7.
+        *Quý khách có thể nhanh chóng thanh toán đơn hàng . Thời gian thanh toán đơn hàng không bó buộc trong giờ hành chính và có thể giao dịch 24/7.
       </div>
       <div class="note-label is-dot-list mz-mb-2">
-        Tất cả các giao dịch trong ZaloPay <span class="mz-font-semibold">hoàn toàn không mất phí</span>.
+        *Tất cả các giao dịch trong ZaloPay <span class="mz-font-semibold">hoàn toàn không mất phí</span>.
       </div>
       <div class="note-label is-dot-list mz-mb-2">
-        Đối tác thanh toán: <span class="mz-font-semibold mz-text-gray-dark">VISA, Master Card, JCB, Vietcombank, Viettinbank, BIDV, Sacombank, Eximbank, SCB, Ngân hàng Bản Việt, ...</span> (Thẻ phát hành trong nước)
+        *Đối tác thanh toán: <span class="mz-font-semibold mz-text-gray-dark">VISA, Master Card, JCB, Vietcombank, Viettinbank, BIDV, Sacombank, Eximbank, SCB, Ngân hàng Bản Việt, ...</span> (Thẻ phát hành trong nước)
       </div>
     </div> 
 				
