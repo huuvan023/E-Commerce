@@ -11,3 +11,45 @@
 .video {
       padding-bottom: 40px;
         margin: 40px 0px 0px 0px }
+.img_hover:hover{
+    background-color: rgb(196, 235, 255);
+  
+  
+}
+.img_hover label:hover{
+  color: rgb(17, 130, 242);;
+
+
+}
+.img_hover img:hover{
+  color: rgb(17, 130, 242);;
+
+
+}
+
+.img_hover{
+  border-radius: 20px;
+}
+#note {
+
+}
+.mz-mb-2 {
+  margin-bottom: .5rem !important;
+}
+.note-label{
+  font-size: 17px;
+  color: #505f77;
+}
+.mz-text-gray-dark {
+  color: #505f77 !important;
+}
+.mz-font-semibold {
+  font-weight: 600 !important;
+}
+#note{
+  margin-left: 50px;
+  background-color: #F5F5F5;
+  border-radius: 25px;
+  height: 570px;
+  font-style: italic;
+}
