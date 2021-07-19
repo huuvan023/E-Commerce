@@ -25,11 +25,11 @@
 
 							<form method="POST">
 								@csrf
-								<input type="text" name="shipping_email" class="shipping_email" placeholder="Điền email">
-								<input type="text" name="shipping_name" class="shipping_name" placeholder="Họ và tên người gửi">
-								<input type="text" name="shipping_address" class="shipping_address" placeholder="Địa chỉ gửi hàng">
-								<input type="text" name="shipping_phone" class="shipping_phone" placeholder="Số điện thoại">
-								<textarea name="shipping_notes" class="shipping_notes" placeholder="Ghi chú đơn hàng của bạn" rows="5"></textarea>
+								<input type="text" name="shipping_email" class="shipping_email" placeholder="Điền email" required>
+								<input type="text" name="shipping_name" class="shipping_name" placeholder="Họ và tên người gửi" required>
+								<input type="text" name="shipping_address" class="shipping_address" placeholder="Địa chỉ gửi hàng" required>
+								<input type="text" name="shipping_phone" class="shipping_phone" placeholder="Số điện thoại" required>
+								<textarea name="shipping_notes" class="shipping_notes" placeholder="Ghi chú đơn hàng của bạn" rows="5" required></textarea>
 
 
 								@if(Session::get('coupon'))
@@ -46,32 +46,51 @@
 									<div class="mypage_tt">
 										<h4>Phương thức thanh toán</h4>
 									</div>
-									<div class="custom-control custom-radio list-group-item">
-										<input type="button" style="border-radius: 50%;background-color:blue;color:white;" class="custom-control-input blue-input send_order" id="cod" name="send_order" value="Chọn">
-										<label class="custom-control-label" for="pm_cod">Thanh toán khi nhận hàng (COD)</label>
-									</div>
-
-									<div class="custom-control custom-radio list-group-item">
-										<input type="button" style="border-radius: 50%;background-color:blue;color:white;" class="custom-control-input blue-input send_order_vnpay" id="vnpay" name="send_order_vnpay" value="Chọn">
-										<label class="custom-control-label " for="vnpay">
-											<img src="{{('public/frontend/images/logo-vnpay.png')}}" /> Thanh toán online qua VNPAY
+						
+									<div class="custom-control custom-radio list-group-item img_hover">
+										
+										<label class="custom-control-label" for="pm_cod">
+										<submit  class="custom-control-input blue-input send_order_vnpay" id="vnpay" name="send_order_vnpay"/>
+										<img  src="{{asset('public/frontend/images/vnpaylo.png')}}" width="100px" height="40px" > Thanh toán online qua VNPAY
+									
 										</label>
 									</div>
+								
+									<div class="custom-control custom-radio list-group-item img_hover">
+										
+										<label class="custom-control-label" for="pm_cod">
+										<submit  class="custom-control-input blue-input send_order" id="cod" name="send_order"/>
+										<img  id="img" src="https://static.fado.vn/uploads/payment-method/2021/01/08/Fado.VN_1610090377.8367.svg"  width="60px" height="50px"/> Thanh toán khi nhận hàng (COD)
+										</label>
+									</div>
+
+							
 								</div>
 							</form>
 			
 							<form action="{{URL::to('/create-payment')}}" method="post">
 								@csrf
 								<div id="paypal-button">
-									<input type="image" src='https://www.paypalobjects.com/marketing/web/vn/manage-my-paypal-account/PP-AcceptanceMarkTray-NoDiscover-243x40-optimised.png' alt='Submit' />
+								<label class="custom-control-label">
+									<input type="image" src='https://www.paypalobjects.com/marketing/web/vn/manage-my-paypal-account/PP-AcceptanceMarkTray-NoDiscover-243x40-optimised.png' alt='Submit' /> Thanh toán online qua PayPal
+								</label>
 								</div>
 							</form>
 						</div>
-						<div class="row">
+						
 
-
-
-						</div>
+		<div class="col-sm-12 col-md-5" id="note"> 
+      <div class="note-label is-dot-list mz-mb-2">
+        *Quý khách có thể nhanh chóng thanh toán đơn hàng . Thời gian thanh toán đơn hàng không bó buộc trong giờ hành chính và có thể giao dịch 24/7.
+      </div>
+      <div class="note-label is-dot-list mz-mb-2">
+        *Tất cả các giao dịch trong ZaloPay <span class="mz-font-semibold">hoàn toàn không mất phí</span>.
+      </div>
+      <div class="note-label is-dot-list mz-mb-2">
+        *Đối tác thanh toán: <span class="mz-font-semibold mz-text-gray-dark">VISA, Master Card, JCB, Vietcombank, Viettinbank, BIDV, Sacombank, Eximbank, SCB, Ngân hàng Bản Việt, ...</span> (Thẻ phát hành trong nước)
+      </div>
+    </div> 
+				
 						<div class="table-responsive cart_info">
 							<table class="table table-condensed">
 								<thead>

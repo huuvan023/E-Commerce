@@ -27,7 +27,7 @@ class PaypalController extends Controller
 
     public function create(Request $request)
     {
-
+        if(Session::get('cart') == true) {
         $apiContext = new \PayPal\Rest\ApiContext(
             new \PayPal\Auth\OAuthTokenCredential(
                 'ARMH8dssshct74JjNFckb3frVtX9n2PuHd3nEWf8BDwoR_lrtNBw4Zu9h9-NSumW37TRLZ2KG6PJjFMQ',     // ClientID
@@ -93,6 +93,8 @@ class PaypalController extends Controller
 
         Session::put('payment_id', $payment->id);
         return redirect($payment->getApprovalLink());
+    }
+    else echo "Vui lòng thêm sản phẩm vào giỏ hàng";
     }
     public function execute(Request $request)
     {
